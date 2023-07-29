@@ -65,5 +65,6 @@ Web application at http://localhost:8080/ using the javascript Neo4j driver (htt
   - the json formatted data is then used by the javascript in the idb web application at idb/idb_viewer
 ## Managing the idb application settings
 ### Default column values in the Tabulation of query data
+You can edit idb/export/topics_default.json to adjust the default columns in the Tabulation of idb.
 ### Custom cypher query Reports
 

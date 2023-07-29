@@ -40,8 +40,13 @@ Web application at http://localhost:8080/ using the javascript Neo4j driver (htt
 ### Stopping the docker container
 - to stop the docker container press ctrl+c
 
+## Global settings
+- some env variables are set in idb/setenv.sh
+- the Dockerfile build on the Neo4j image, installs python version 3, runs an apache webserver and finally loads data with an "extension script" we procide as idb_init/init_wrapper.sh
 ## Managing the data loading process
-
+- the process is kicked off by the "extension script" idb_init/init_wrapper.sh
+- this calls the script idb_init/init_wrapper.sh which will parse some raw data from the subdirextory idb/source
+-- here you can add other folders and data files
 ## Managing the idb application settings
 ### Default column values in the Tabulation of query data
 ### Custom cypher query Reports

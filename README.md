@@ -45,8 +45,24 @@ Web application at http://localhost:8080/ using the javascript Neo4j driver (htt
 - the Dockerfile build on the Neo4j image, installs python version 3, runs an apache webserver and finally loads data with an "extension script" we procide as idb_init/init_wrapper.sh
 ## Managing the data loading process
 - the process is kicked off by the "extension script" idb_init/init_wrapper.sh
-- this calls the script idb_init/init_wrapper.sh which will parse some raw data from the subdirextory idb/source
-  - here you can add other folders and data files
+- this calls the script idb_init/init_wrapper.sh which will call idb/get_data.sh and do the following:
+  - read raw data from the subdirextory idb/source
+    - here you can add other grouping folders and data files
+  - parse the raw data with the scripts at idb/parse
+    - you can add any parsing scripts in idb/parse
+    - each parsing script should output csv files in the idb/csv folder
+    - the csv files are in a strict format (see example code):
+      - file name
+      - first line contains column names in capitals
+      - each column is delimited by the | (pipe) character
+      - the first column should be the primary key, in case of node data
+  - based on the csv files, cypher query commands are generated in the idb/load folder
+  - any custom cypher queries can be added as static files with the .cyp extension
+    - indexes and constraints need to be added manually
+    - make sure each node type (label) has a primary key
+  - the cypher commands from the files at idb/load are run in a specific order (see idb/get_data.sh)
+  - finally, the data structure is pulled from the database with cypher queries and written to json format
+  - the json formatted data will be used by the javascript in the idb web application at idb/idb_viewer
 ## Managing the idb application settings
 ### Default column values in the Tabulation of query data
 ### Custom cypher query Reports

@@ -61,8 +61,8 @@ Web application at http://localhost:8080/ using the javascript Neo4j driver (htt
     - indexes and constraints need to be added manually
     - make sure each node type (label) has a primary key
   - the cypher commands from the files at idb/load are run in a specific order (see idb/get_data.sh)
-  - finally, the data structure is pulled from the database with cypher queries and written to json format
-  - the json formatted data will be used by the javascript in the idb web application at idb/idb_viewer
+  - finally, the data structure is pulled from the database with cypher queries by idb/export/get.schema_info.py and written to json format
+  - the json formatted data is then used by the javascript in the idb web application at idb/idb_viewer
 ## Managing the idb application settings
 ### Default column values in the Tabulation of query data
 ### Custom cypher query Reports

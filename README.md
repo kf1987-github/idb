@@ -22,7 +22,8 @@ Web application at http://localhost:8080/ using the javascript Neo4j driver (htt
 - set up a docker installation (tested on Ubuntu 18.04.6 LTS using https://docs.docker.com/engine/install/ubuntu/)
 - pull the idb source code to a local directory <IDB_DIR>
 - from a terminal, change directory to <IDB_DIR>
-- build the image using the Dockerfile issuing: docker build . --tag idb:idb-1.0
+- build the image using the Dockerfile issuing:
+    docker build . --tag idb:idb-1.0
 ### Running the docker image as a docker container
 - run the docker image issuing: docker run --rm --publish=7474:7474 --publish=7687:7687 --publish=8080:8080 --env NEO4J_AUTH=neo4j/docker4j idb:idb-0.34
 - the container takes a minute to spin up and once loaded will output messages like: Transaction with id 1 has been automatically rolled back due to transaction timeout.

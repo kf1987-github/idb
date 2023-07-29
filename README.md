@@ -46,7 +46,7 @@ Web application at http://localhost:8080/ using the javascript Neo4j driver (htt
 ## Managing the data loading process
 - the process is kicked off by the "extension script" idb_init/init_wrapper.sh
 - this calls the script idb_init/init_wrapper.sh which will parse some raw data from the subdirextory idb/source
--- here you can add other folders and data files
+ - here you can add other folders and data files
 ## Managing the idb application settings
 ### Default column values in the Tabulation of query data
 ### Custom cypher query Reports

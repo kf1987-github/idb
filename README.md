@@ -67,4 +67,9 @@ Web application at http://localhost:8080/ using the javascript Neo4j driver (htt
 ### Default column values in the Tabulation of query data
 You can edit idb/export/topics_default.json to adjust the default columns in the Tabulation of idb.
 ### Custom cypher query Reports
+todo
 
+# TODO
+- custom reports
+- code cleanup
+- optimize idb html/css layout

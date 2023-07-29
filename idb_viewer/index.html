@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap-4.3.1-dist/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+
+  <title>IDB viewer</title>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <div class="row" id="container_top">
+      <div class="col-md-12" id="idb-top">
+
+        <div id="title" class="my-3">
+          <h1>IDB viewer</h1>
+        </div>
+
+        <div class="btn-group my-2" id="btn_group_topics">
+          <div class="dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Nodes</button>
+            <div class="dropdown-menu" id="menu_nodes">
+            </div>
+          </div>
+          <div class="dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Relations</button>
+            <div class="dropdown-menu" id="menu_relations">
+            </div>
+          </div>
+          <div class="dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Reports</button>
+            <div class="dropdown-menu" id="menu_reports">
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-group float-right my-2" id="btn_group_downloads">
+          <div class="dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Downloads</button>
+            <div class="dropdown-menu" id="menu_downloads">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row" id="container_start">
+      <div class="col-md-12" id="idb-start">
+
+        <div class="alert alert-success my-2">
+          Click on a topic to visualize its data.
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row" id="container-viewer">
+      <div class="col-md-10" id="viewer-main">
+
+        <div id="graph">
+        </div>
+      
+      </div>
+      <div class="col-md-2" id="viewer-right">
+
+        <div id="node_legend">
+        </div>
+      
+      </div>
+    </div>
+
+    <div class="row" id="container_main">
+      <div class="col-md-2" id="idb-left">
+
+        <div id="checkboxes" style="white-space: nowrap">
+        </div>
+      
+      </div>
+      <div class="col-md-10" id="idb-main">
+
+        <table id="data_table" class="display nowrap" style="width:100%">
+        </table>
+      
+      </div>
+    </div>
+
+    <div class="row" id="container_bottom">
+      <div class="col-md-12" id="idb-bottom">
+        <br>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery-3.4.1.slim.min/jquery-3.4.1.slim.min.js"></script>
+  <script src="js/popper-1.14.7/popper.min.js"></script>
+  <script src="js/bootstrap-4.3.1-dist/bootstrap.min.js"></script>
+  <!-- <script type="text/javascript" src="jQuery-3.3.1/jquery-3.3.1.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <!-- <script type="text/javascript" src="DataTables/datatables.min.js"></script> -->
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+
+  <script src="topics.js"></script>
+
+  <script src="https://unpkg.com/neo4j-driver@5.7.0/lib/browser/neo4j-web.js"></script>
+  <script src="https://unpkg.com/force-graph"></script>
+
+  <script src="idb_viewer.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>

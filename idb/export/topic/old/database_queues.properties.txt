@@ -1,0 +1,9 @@
+database
+owner
+queue_name
+queue_table
+db_link
+destination_service_name
+destination_database
+destination_schema
+destination_queue_name

@@ -1,0 +1,6 @@
+DB_NAME|DB_VERSION|APP|ENV|HA|HOST
+db01p|19c|hr_app|PROD|yes|node01p
+db01d|19c|hr_app|DEV|no|node01d
+db02p|19c|cust_app|PROD|yes|node02p
+db02d|19c|cust_app|DEV|no|node02d
+db03d|12c|hr_app|DEV|no|node02d

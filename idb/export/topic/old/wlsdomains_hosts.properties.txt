@@ -1,0 +1,3 @@
+wls_domain_name
+wls_version
+wls_hosts

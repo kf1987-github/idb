@@ -1,0 +1,4 @@
+vm_cluster
+datacenter
+env
+vm_host_type

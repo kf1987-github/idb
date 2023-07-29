@@ -1,0 +1,6 @@
+db_link_name
+db_link
+database
+owner
+destination_schema
+connect_string

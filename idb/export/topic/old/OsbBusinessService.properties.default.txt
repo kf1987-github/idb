@@ -1,0 +1,3 @@
+osb_businessservice_name
+type
+url

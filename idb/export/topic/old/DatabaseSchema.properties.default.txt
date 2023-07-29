@@ -1,0 +1,5 @@
+schema_name
+database
+owner
+size_gb
+tablespaces

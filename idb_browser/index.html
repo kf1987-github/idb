@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap-4.3.1-dist/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+
+  <title>IDB browser</title>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <div class="row" id="container_top">
+      <div class="col-md-12" id="idb-top">
+
+        <div id="title" class="my-3">
+          <h1>IDB browser</h1>
+        </div>
+
+        <div class="btn-group my-2" id="btn_group_topics">
+          <div class="dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Nodes</button>
+            <div class="dropdown-menu" id="menu_nodes">
+            </div>
+          </div>
+          <div class="dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Relations</button>
+            <div class="dropdown-menu" id="menu_relations">
+            </div>
+          </div>
+          <div class="dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Reports</button>
+            <div class="dropdown-menu" id="menu_reports">
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-group float-right my-2" id="btn_group_downloads">
+          <div class="dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Downloads</button>
+            <div class="dropdown-menu" id="menu_downloads">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row" id="container_start">
+      <div class="col-md-12" id="idb-start">
+
+        <br>
+        <div class="alert alert-success">
+          Click on a topic to list its data.
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row" id="container_main">
+      <div class="col-md-2" id="idb-left">
+
+        <div id="checkboxes" style="white-space: nowrap">
+        </div>
+      
+      </div>
+      <div class="col-md-10" id="idb-main">
+
+        <table id="data_table" class="display nowrap" style="width:100%">
+        </table>
+      
+      </div>
+    </div>
+
+    <div class="row" id="container_bottom">
+      <div class="col-md-12" id="idb-bottom">
+        <br>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery-3.4.1.slim.min/jquery-3.4.1.slim.min.js"></script>
+  <script src="js/popper-1.14.7/popper.min.js"></script>
+  <script src="js/bootstrap-4.3.1-dist/bootstrap.min.js"></script>
+  <!-- <script type="text/javascript" src="jQuery-3.3.1/jquery-3.3.1.min.js"></script> -->
+  <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+
+  <script src="topics.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+osb_proxyservice_name
+type
+osb_project_name
+url

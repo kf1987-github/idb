@@ -1,0 +1,7 @@
+HOST_NAME|DOMAIN|DC
+node01p|prod.example.org|Los Angeles
+node02p|prod.example.org|New York
+node03p|prod.example.org|Berkeley
+node01d|dev.example.org|Dallas
+node02d|dev.example.org|New York
+node03d|dev.example.org|Houston

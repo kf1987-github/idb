@@ -1,0 +1,16 @@
+{
+"nodes":
+  [{"topic": "Database",
+   "default_columns": ["db_name", "app", "env", "host"]
+  },
+  {"topic": "Table",
+   "default_columns": ["db_name", "options", "pk_table", "source_type", "table_name"]
+  }],
+"reports":
+  [{"topic": "hosts_summary",
+   "columns": ["domain", "dc", "host_count"],
+   "default_columns": ["domain", "dc", "host_count"],
+   "viewer": {},
+   "browser": {}
+  }]
+}

@@ -1,0 +1,6 @@
+
+LOAD CSV WITH HEADERS FROM 'file:///<CSVFILE>' AS line
+FIELDTERMINATOR '<FS>'
+MATCH (s:<NODETYPE> {<unique_property>: line.<UNIQUE_PROPERTY>})
+SET <SET_PROPERTIES> ;
+

@@ -1,0 +1,7 @@
+vm_cluster
+datacenter
+vm_host_type
+env
+hostname
+os_name
+os_version

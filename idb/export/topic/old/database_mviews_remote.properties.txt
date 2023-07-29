@@ -1,0 +1,6 @@
+database
+owner
+mview_name
+db_link
+destination_service_name
+destination_database

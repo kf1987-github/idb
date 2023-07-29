@@ -1,0 +1,17 @@
+PK_TABLE|DB_NAME|TABLE_NAME|OPTIONS
+db01p.t_users|db01p|t_users|partitioning
+db01p.t_payroll|db01p|t_payroll|none
+db01p.t_office|db01p|t_office|none
+db01d.t_users|db01d|t_users|partitioning
+db01d.t_payroll|db01d|t_payroll|none
+db01d.t_office|db01d|t_office|none
+db02p.t_cust|db02p|t_cust|partitioning
+db02p.t_address|db02p|t_address|none
+db02p.t_contract|db02p|t_contract|none
+db02d.t_cust|db02d|t_cust|partitioning
+db02d.t_address|db02d|t_address|none
+db02d.t_contract|db02d|t_contract|none
+db03d.t_cust|db03d|t_cust|partitioning
+db03d.t_address|db03d|t_address|none
+db03d.t_contract|db03d|t_contract|none
+db03d.t_test|db03d|t_test|archived

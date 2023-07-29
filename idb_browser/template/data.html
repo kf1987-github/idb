@@ -1,0 +1,121 @@
+<html>
+<head>
+  <title><DATA></title>
+
+<script type="text/javascript" src="<DATA>.js"></script>
+<script type="text/javascript" src="<DATA>.default.js"></script>
+<script type="text/javascript" src="jQuery-3.3.1/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="DataTables/datatables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+<style>
+   .dataTables_filter input {
+     width: 500px
+   }
+   #data_table_filter {
+     text-align: left;
+     float: left;
+     margin: 0px 0px 0px 40px;
+   }
+   #data_table_paginate {
+     float: left;
+     margin: 0px 0px 0px 40px;
+   }
+</style>
+
+<script type="text/javascript">
+
+function toggleVisibility(index) {
+  if ( ! $("#input_"+index).prop("checked") ) {
+    $("#data_table").DataTable().column(index).visible( false );
+    $("#input_all").prop("checked",false)
+  } else {
+    $("#data_table").DataTable().column(index).visible( true );
+  }
+}
+function toggleVisibilityAll() {
+  if ( $("#input_all").prop("checked") ) {
+    for (i = 0; i < v_columns.length; i++) {
+      $("#input_"+i).prop("checked",true);
+      $("#data_table").DataTable().column(i).visible( true, false );
+    }
+  } else {
+    for (i = 0; i < v_columns.length; i++) {
+      $("#input_"+i).prop("checked",false);
+      $("#data_table").DataTable().column(i).visible( false, false );
+    }
+    for (i = 0; i < v_columns_default.length; i++) {
+      $("#data_table").DataTable().column(i).visible( true, false );
+      $("#input_"+i).prop("checked",true);
+    }
+  }
+}
+
+function columnFormat(value) {
+  return "{ data: '" + value + "', title: '" + value + "', 'defaultContent': '', 'visible': false }";
+}
+
+// Below arrays are defined in external js files
+// columns
+// columns_default
+var i_columns = columns;
+var v_columns_default = columns_default;
+
+var v_columns = v_columns_default.slice();
+for (i = 0; i < i_columns.length; i++) {
+  if ( ! v_columns.includes(i_columns[i]) ) {
+    v_columns.push(i_columns[i]);
+  }
+}
+var datatable_columns = eval("[" + v_columns.map(columnFormat) + "]");
+
+  $(document).ready( function () {
+
+    // create checkboxes
+    var html_text = "<label><input id='input_all' type='checkbox'";
+    html_text = html_text + " onchange='toggleVisibilityAll()'>" + "ALL" + "</label><br>";
+    $("#checkboxes").append(html_text);
+
+    for (i = 0; i < v_columns.length; i++) {
+      html_text = "<label><input id='input_" + i + "' type='checkbox'";
+      html_text = html_text + " onchange='toggleVisibility(" + i + ")'>" + v_columns[i] + "</label><br>";
+      $("#checkboxes").append(html_text);
+    }
+
+    // load data table
+    $('#data_table').DataTable( {
+      ajax: {
+        url: '<DATA>.json',
+        dataSrc: ''
+      },
+      columns: datatable_columns,
+      lengthMenu: [ [10, 15, 25, 50, -1], [10, 15, 25, 50, "All"] ],
+      pageLength: 15
+    } );
+    $("#data_table").width("100%");
+
+    for (i = 0; i < v_columns_default.length; i++) {
+      $("#data_table").DataTable().column(i).visible( true );
+      $("#input_"+i).prop("checked",true);
+    }
+  } );
+</script>
+</head>
+<body>
+
+<table style="background-color: #ccffcc;">
+<td valign="top" style="white-space: nowrap">
+<a href="<DATA>.json">download</a> json data <br>
+<a href="<DATA>.csv">download</a> csv data <br>
+<br>
+<div id="checkboxes" style="display: inline-block">
+</div>
+
+</td>
+<td valign="top">
+
+<table id="data_table" class="display nowrap">
+</table>
+
+<td>
+
+</body>

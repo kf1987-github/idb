@@ -1,0 +1,43 @@
+
+#title {
+  color: #000000;
+  text-align: center;
+  cursor: pointer;
+}
+#idb-top {
+  background-color: #66ffcc;
+}
+#idb-left {
+  background-color: #ccffcc;
+}
+#idb-main {
+  background-color: #ccff44;
+}
+body {
+  background-color: #ccff44;
+}
+#checkboxes label {
+  margin-bottom: 0px;
+}
+#btn_group_downloads {
+  display: none;
+}
+
+// datatables
+.dataTables_filter input {
+  width: 500px
+}
+#data_table_filter {
+  text-align: left;
+  float: left;
+  margin: 0px 0px 0px 40px;
+}
+#data_table_paginate {
+  float: left;
+  margin: 0px 0px 0px 40px;
+}
+
+//#data_table {
+//  width: 100%;
+//}
+

@@ -1,0 +1,6 @@
+wls_datasource_name
+wls_domain_name
+wls_datasource
+db_user
+jndi_name
+connect_string

@@ -1,0 +1,5 @@
+wls_domain_name
+wls_datasource
+ldapentry_name
+service_name
+database
